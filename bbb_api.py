@@ -107,8 +107,9 @@ def createMeetingURL(name, meetingID, attendeePW, moderatorPW, welcome, logoutUR
     if (welcome and welcome != ''):
         welcome_parameters = {'welcome': welcome.strip()} 
         welcome_parameters = urllib.urlencode(welcome_parameters)
-    
+        welcome_parameters = "&" + welcome_parameters
     params = parameters + welcome_parameters
+    # print params
     return url_create  + params + '&checksum=' + hashlib.sha1("create" + params + SALT).hexdigest() 
 
 
