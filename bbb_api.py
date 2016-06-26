@@ -18,12 +18,10 @@
 #	0.1		--  written by Omar Shammas (email : omar DOT shammas [a t ] g m ail DOT com)
 #				Initial version works with 0.7 version of the BBB API                   
 
-
 import urllib, urllib2, socket
 import hashlib, random
 from xml.dom import minidom 
-from xml.dom.minidom import Node 
-
+from xml.dom.minidom import Node
 
 def bbb_wrap_load_file(url):
     timeout = 10
@@ -58,8 +56,8 @@ def assign2Dict(xml):
 #@param meetingID -- the unique meeting identifier used to store the meeting in the bigbluebutton server
 #@param username -- the display name to be used when the user joins the meeting
 #@param PW -- the attendee or moderator password of the meeting
-#@param SALT -- the security salt of the bigbluebutton server
-#@param URL -- the url of the bigbluebutton server
+#@param SALT -- the security salt of the bigbluebutton server e.g. "8cd8ef52e8e101574e400365b55e11a6"
+#@param URL -- the url of the bigbluebutton server e.g. http://test-install.blindsidenetworks.com/bigbluebutton/
 #
 #@return The url to join the meeting
 
