@@ -18,6 +18,10 @@
 #	0.1		--  written by Omar Shammas (email : omar DOT shammas [a t ] g m ail DOT com)
 #				Initial version works with 0.7 version of the BBB API                   
 
+
+#@param SALT -- the security salt of the bigbluebutton server e.g. "8cd8ef52e8e101574e400365b55e11a6"
+#@param URL -- the url of the bigbluebutton server e.g. http://test-install.blindsidenetworks.com/bigbluebutton/
+
 import urllib, urllib2, socket
 import hashlib, random
 from xml.dom import minidom 
